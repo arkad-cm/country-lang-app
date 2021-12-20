@@ -10,7 +10,7 @@
 **Body**
 `{
     "Query": {
-         "Country" : "BR",
+         "Country" : "BR"
     }
 }`
 
