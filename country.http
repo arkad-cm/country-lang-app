@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "Query": {
-    "country": "BR"
+    "country": "IN"
   }
 }
 

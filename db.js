@@ -2,19 +2,31 @@ const csv = require("csvtojson/v2")
 const { Sequelize } = require("sequelize")
 
 const sequelize = new Sequelize(
-  "postgres://postgres:root@127.0.0.1:5432/citymall",
+  // "postgres://postgres:root@db:5432/citymall",
+  "postgres://db:5432/citymall",
   {
     logging: console.log,
   },
 )
+let retries = 5
 
 const connect = async () => {
-  try {
-    await sequelize.authenticate()
-    console.log("Connection has been established successfully.")
-    await parseAndPersistInDB()
-  } catch (error) {
-    console.error("Unable to connect to the database:", error)
+  while (retries) {
+    try {
+      await sequelize.authenticate()
+      console.log("Connection has been established successfully.")
+      await sequelize.sync({force: true})
+      await parseAndPersistInDB()
+      break
+    } catch (error) {
+      console.error("Unable to connect to the database:", error)
+      retries--
+      console.log('retries left: ' + retries)
+      await new Promise(res => setTimeout(res, 5000))
+      if (!retries) {
+        throw new Error("Could not connect to DB.")
+      }
+    }
   }
 }
 
