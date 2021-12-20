@@ -1,0 +1,34 @@
+{
+  "expected": {
+    "data": {
+      "country": {
+        "name": "Brazil",
+        "native": "Brasil",
+        "capital": "Brasília",
+        "currency": "BRL",
+        "languages": [
+          {
+            "code": "pt",
+            "name": "Portuguese"
+          }
+        ]
+      }
+    }
+  },
+  "got": {
+    "data": {
+      "country": {
+        "name": "Brazil",
+        "native": "Brasil",
+        "capital": "Brasília",
+        "currency": "BRL",
+        "languages": [
+          {
+            "code": "pt",
+            "name": "Portuguese"
+          }
+        ]
+      }
+    }
+  }
+}
