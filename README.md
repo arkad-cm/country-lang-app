@@ -4,7 +4,6 @@
 
 ## Instructions
 * Clone 
-* Install Postgres (username: postgres, password: root, port: 5432)
 * npm install
 * npm start
 
