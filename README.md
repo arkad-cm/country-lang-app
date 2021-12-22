@@ -1,8 +1,10 @@
 # country-lang-app
 
+#### Deployed at <a href="country-lang.herokuapp.com">country-lang.herokuapp.com</a>
+
 ## Instructions
 * Clone 
-* Install Postgress (username: postgres, password: root, port: 5432)
+* Install Postgres (username: postgres, password: root, port: 5432)
 * npm install
 * npm start
 
