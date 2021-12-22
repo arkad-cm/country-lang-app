@@ -1,9 +1,8 @@
 const csv = require("csvtojson/v2")
 const { Sequelize } = require("sequelize")
 
-const sequelize = new Sequelize("citymall", "postgres", "root", {
+const sequelize = new Sequelize("citymall", {
   dialect: "postgres",
-  host: process.env.DB_HOST || 'localhost'
 })
 let retries = 5
 
