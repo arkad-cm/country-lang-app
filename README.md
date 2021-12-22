@@ -1,6 +1,6 @@
 # country-lang-app
 
-#### Deployed at <a href="country-lang.herokuapp.com">country-lang.herokuapp.com</a>
+#### Deployed at <a href="https://country-lang.herokuapp.com">country-lang.herokuapp.com</a>
 
 ## Instructions
 * Clone 
