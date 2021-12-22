@@ -3,9 +3,8 @@
 #### Deployed at <a href="https://country-lang.herokuapp.com">country-lang.herokuapp.com</a>
 
 ## Instructions
-* Clone 
-* npm install
-* npm start
+
+* Send a POST Request with the following body to the deployed URL
 
 ** POST / **
 **Body**
