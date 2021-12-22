@@ -1,9 +1,12 @@
 const csv = require("csvtojson/v2")
 const { Sequelize } = require("sequelize")
+const pg = require("pg")
+pg.defaults.ssl = true
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres",
-  ssl: true
+  ssl: true,
+  dialectOptions: { ssl: { require: true } },
 })
 let retries = 5
 
