@@ -10,8 +10,9 @@ app.use(express.json())
 
 app.use("/", indexController)
 
+const PORT = process.env.PORT || 8000
 connect()
-  .then(() => app.listen(8000))
-  .then(() => console.log("Server listening at PORT 8000"))
+  .then(() => app.listen(PORT))
+  .then(() => console.log("Server listening at PORT " + PORT))
 
 module.exports = app
