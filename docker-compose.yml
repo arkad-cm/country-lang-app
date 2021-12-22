@@ -12,8 +12,6 @@ services:
       - '5432:5432'
   server:
     image: arkadcml/country-lang-app
-    depends_on:
-      - postgres
     ports:
       - '8000:8000'
     networks:
