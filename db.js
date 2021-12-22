@@ -6,7 +6,12 @@ pg.defaults.ssl = true
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres",
   ssl: true,
-  dialectOptions: { ssl: { require: true } },
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 })
 let retries = 5
 
